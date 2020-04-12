@@ -23,7 +23,9 @@ public class FlightPricesDto {
     @JsonProperty("Currencies")
     private List<CurrencyDto> currencies;
 
-    public <T> void setQuotas(List<QuoteDto> quotas) {
+    //todo: Commented, because these Setters are handled by Lombok here !!!
+
+/*    public <T> void setQuotas(List<QuoteDto> quotas) {
         this.quotas = (List<QuoteDto>) quotas;
     }
 
@@ -40,5 +42,5 @@ public class FlightPricesDto {
 
     public <T> void setPlaces(List<PlaceDto> places) {
         this.places = (List<PlaceDto>) places;
-    }
+    }*/
 }

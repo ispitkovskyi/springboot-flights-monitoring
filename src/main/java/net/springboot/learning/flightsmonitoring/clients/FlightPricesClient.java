@@ -10,7 +10,7 @@ import net.springboot.learning.flightsmonitoring.dto.FlightPricesDto;
 /**
  * Browse flight prices.
  */
-public interface FlightPriceClient {
+public interface FlightPricesClient {
 
     /**
      * Browse quotes for current flight based on provided arguments. One-way ticket.

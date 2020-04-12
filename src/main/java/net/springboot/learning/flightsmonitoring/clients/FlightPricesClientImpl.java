@@ -5,25 +5,25 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import net.springboot.learning.flightsmonitoring.UniRestService;
+import net.springboot.learning.flightsmonitoring.services.UniRestService;
 import net.springboot.learning.flightsmonitoring.dto.*;
 import org.apache.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.List;
 
-import static net.springboot.learning.flightsmonitoring.UniRestServiceImpl.CURRENCIES_KEY;
-import static net.springboot.learning.flightsmonitoring.UniRestServiceImpl.PLACES_KEY;
+import static net.springboot.learning.flightsmonitoring.services.UniRestServiceImpl.CURRENCIES_KEY;
+import static net.springboot.learning.flightsmonitoring.services.UniRestServiceImpl.PLACES_KEY;
 
 /**
  * Created by igors on 4/12/20.
  */
 
-//WHY NOT @Component ???
-@Service
-public class FlightPriceClientImpl implements FlightPriceClient {
+//WHY NOT @Service ???
+@Component
+public class FlightPricesClientImpl implements FlightPricesClient {
 
     public static final String BROWSE_QUOTES_FORMAT = "/apiservices/browsequotes/v1.0/%s/%s/%s/%s/%s/%s";
     public static final String OPTIONAL_BROWSE_QUOTES_FORMAT = BROWSE_QUOTES_FORMAT + "?inboundpartialdate=%s";

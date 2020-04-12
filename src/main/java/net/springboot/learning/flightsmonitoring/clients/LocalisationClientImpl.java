@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import net.springboot.learning.flightsmonitoring.UniRestService;
+import net.springboot.learning.flightsmonitoring.services.UniRestService;
 import net.springboot.learning.flightsmonitoring.dto.CountryDto;
 import net.springboot.learning.flightsmonitoring.dto.CurrencyDto;
 import org.apache.http.HttpStatus;
@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
 
-import static net.springboot.learning.flightsmonitoring.UniRestServiceImpl.*;
+import static net.springboot.learning.flightsmonitoring.services.UniRestServiceImpl.*;
 
 /**
  * Created by igors on 4/12/20.

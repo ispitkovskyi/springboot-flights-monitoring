@@ -9,23 +9,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import net.springboot.learning.flightsmonitoring.UniRestService;
+import net.springboot.learning.flightsmonitoring.services.UniRestService;
 import net.springboot.learning.flightsmonitoring.dto.PlacesDto;
 import org.apache.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.List;
 
-import static net.springboot.learning.flightsmonitoring.UniRestServiceImpl.PLACES_FORMAT;
-import static net.springboot.learning.flightsmonitoring.UniRestServiceImpl.PLACES_KEY;
+import static net.springboot.learning.flightsmonitoring.services.UniRestServiceImpl.PLACES_FORMAT;
+import static net.springboot.learning.flightsmonitoring.services.UniRestServiceImpl.PLACES_KEY;
 
 /**
  * {@inheritDoc}
  */
-//WHY NOT @Component ???
-@Service
+//INITIALLY HERE WAS @Service - WHY???
+@Component
 public class PlacesClientImpl implements PlacesClient {
 
     @Autowired

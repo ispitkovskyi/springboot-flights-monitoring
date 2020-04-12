@@ -1,4 +1,4 @@
-package net.springboot.learning.flightsmonitoring;
+package net.springboot.learning.flightsmonitoring.services;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;

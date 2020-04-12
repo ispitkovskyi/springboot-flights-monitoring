@@ -1,4 +1,4 @@
-package net.springboot.learning.flightsmonitoring;
+package net.springboot.learning.flightsmonitoring.services;
 
 //import com.github.romankh3.flightsmonitoring.exception.FlightClientException;
 import com.mashape.unirest.http.HttpResponse;
@@ -22,7 +22,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class UniRestServiceImpl implements UniRestService {
-    Logger log = LoggerFactory.getLogger(UniRestServiceImpl.class);
 
     public static final String HOST = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com";
 
