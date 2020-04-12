@@ -1,4 +1,4 @@
-package net.springboot.learning.flightsmonitoring;
+package net.springboot.learning.flightsmonitoring.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

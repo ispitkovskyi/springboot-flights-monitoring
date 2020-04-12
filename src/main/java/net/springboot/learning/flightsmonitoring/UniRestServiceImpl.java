@@ -1,12 +1,12 @@
 package net.springboot.learning.flightsmonitoring;
 
 //import com.github.romankh3.flightsmonitoring.exception.FlightClientException;
-import net.springboot.learning.flightsmonitoring.UniRestService;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import lombok.extern.slf4j.Slf4j;
+import net.springboot.learning.flightsmonitoring.clients.FlightClientException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +34,7 @@ public class UniRestServiceImpl implements UniRestService {
     public static final String CURRENCIES_KEY = "Currencies";
     public static final String COUNTRIES_KEY = "Countries";
 
+    //"x.rapid.api.key" property is expected to be available in the application.properties file in "resources"
     @Value("${x.rapid.api.key}")
     private String xRapidApiKey;
 
@@ -41,9 +42,10 @@ public class UniRestServiceImpl implements UniRestService {
      * {@inheritDoc}
      */
     @Override
-    public HttpResponse<JsonNode> get(String path) throws FlightClientException{
+    public HttpResponse<JsonNode> get(String path) throws FlightClientException {
         HttpResponse<JsonNode> response = null;
-        //todo: to get all currencies, "path" should be equal to "apiservices/reference/v1.0/currencies"
+        //todo: to get all currencies, "path" should be equal to "/apiservices/reference/v1.0/currencies"
+        //todo: to get all countries, "path" should be equal to "/apiservices/reference/v1.0/countries"
         try {
             response = Unirest.get(HOST + path)
                     .header("x-rapidapi-host", "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com")
